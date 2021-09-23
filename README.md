@@ -9,14 +9,15 @@ This tutorial assumes that git has already been installed and the user has creat
 `git --version`
 
 ### 3. Check your configuration variables
-- If you already have git installed from a while ago, you can check your config variables to see if you already have some:
+- If you already have git installed from a while ago, you can check your config variables to see if you already have some:  
+
 `git config --list`
 
 ### 4. Set up configuration variables  
 
 `git config --global user.name "YOUR NAME HERE"`  
 
-`git config —globe user.email "YOUR EMAIL HERE"`
+`git config --global user.email "YOUR EMAIL HERE"`
 
 ### 5. Navigate to the folder you would like to be working in  
 
