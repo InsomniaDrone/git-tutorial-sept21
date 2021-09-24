@@ -30,7 +30,7 @@ This tutorial assumes that git has already been installed and the user has creat
 `cd berkeley/tutorials`
 
 ### 7. Initiate an empty local git repository  
-Return to your command line (in the same working directory as you were before)
+Return to your command line (in the same working directory as you were before)  
 `git init`
 
 ### 8. Connect your local folder location to a remote repository on github
@@ -41,7 +41,7 @@ Return to your command line (in the same working directory as you were before)
 `git remote add origin [paste URL here]`
 
 ### 9. Pull changes from github
-- Since you created the README file on github, you want to bring that to your local directory.
+- Since you created the README file on github, you want to bring that to your local directory.  
 `git pull origin main`  
 
 ### 10. Create an empty test file in your local directory  
