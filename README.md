@@ -31,7 +31,7 @@ This tutorial assumes that git has already been installed and the user has creat
 
 ### 7. Copy the remote repository to your local working space  
 - Go into your repository on github.com, and click the green 'code' button on the upper right of the screen. Copy and paste the HTTPS web URL:  
-![create new repo](imgs/new-repo-screenshot.png)  
+![create new repo](imgs/git-clone-screenshot.png)  
 
 In your terminal, run the following command:  
 
