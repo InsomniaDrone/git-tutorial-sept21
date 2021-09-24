@@ -29,43 +29,38 @@ This tutorial assumes that git has already been installed and the user has creat
 
 `cd berkeley/tutorials`
 
-### 7. Initiate an empty local git repository  
-Return to your command line (in the same working directory as you were before)  
-`git init`
+### 7. Copy the remote repository to your local working space  
+- Go into your repository on github.com, and click the green 'code' button on the upper right of the screen. Copy and paste the HTTPS web URL:  
+![create new repo](imgs/new-repo-screenshot.png)  
 
-### 8. Connect your local folder location to a remote repository on github
-- Go to github.com, sign in
-- navigate into the repository you've created for this project, and at the top right of the screen, click the green 'Code' button. 
-- Copy the https URL, and return to the terminal:  
+In your terminal, run the following command:  
 
-`git remote add origin [paste URL here]`
+`git clone [paste URL here]`  
 
-### 9. Pull changes from github
-- Since you created the README file on github, you want to bring that to your local directory.  
-`git pull origin main`  
+- You should now see the readme file show up in your local directory!  
 
-### 10. Create an empty test file in your local directory  
+### 8. Create an empty test file in your local directory  
    
 `touch test.txt`  
 
 - type `ls` in your command line, and you should see this file appear. 
 
-### 11. Submit local changes to git
+### 9. Submit local changes to git
 `git add .`  
 
-### 12. Check to see whether changes have been incorporated
+### 10. Check to see whether changes have been incorporated
 `git status`  
 
-### 13. Write a commit message: describe the changes you made
+### 11. Write a commit message: describe the changes you made
 `git commit -m "first commit"`  
 
-### 14. Push changes to your remote repository on github  
+### 12. Push changes to your remote repository on github  
 
 `git push -u origin main`  
 - NOTE: you only have to use the `-u` flag for the FIRST push. Later, you can just write `git push origin main.`  
 - check github.com - you should now see your empty test.txt file appear in your online github repository!  
 
-### 15. Create a .gitignore file using the command line
+### 13. Create a .gitignore file using the command line
 - This is where you can specify which files/folders that you DON'T want sent to github from your local workspace.  
 
 `touch .gitignore`  
@@ -77,7 +72,7 @@ Return to your command line (in the same working directory as you were before)
 - press `<ESCAPE>` to get out of write mode onec you are finished
 - `:wq` and then `<ENTER>` will quit and save changes.  
 
-### 16. add, commit, and push changes to github  
+### 14. add, commit, and push changes to github  
 `git add .`  
 `git commit -m "adding .gitignore file"`  
 `git push origin main`   
@@ -86,7 +81,7 @@ Return to your command line (in the same working directory as you were before)
 
 #### That's it! You did it!
 
-## Troubleshooting and other useful commands for when mistakes are made...
+## Troubleshooting...
 ### To remove a remote repository from your local working directory:
 `git remote rm [name of remote]`  
 
@@ -98,3 +93,18 @@ Return to your command line (in the same working directory as you were before)
 
 ### to get rid of newly created test files that you don't want
 `rm test.txt test2.txt`
+
+## Other useful commands
+- In this tutorial, we used `git clone` to download the repository from git onto our local drive. This does multiple things at once: in addition to downloading the repository, it automatically initiates a local git repository, and connects your local working directory with the remote repository. This works great in some cases, but there might be a case in which changes are made online in an existing repository and you want to update those changes locally, or perhaps you want to get started locally. 
+
+If you want to get started locally, your workflow might look like: 
+
+`cd berkeley/tutorials` (navigate to where you want to work from locally)   
+`git init` (to open an empty git repository in your local working directory)  
+`git remote add origin [paste URL here]` (to connect your local directory with an online github repository. Use the same URL as you would use for `git clone`).  
+
+If you are working on an ongoing project, and you (or a collaborator) makes changes to an online repository, you'll want to update your local directory before making more changes. To do this, you can run:  
+
+`git pull origin main`  
+
+to merge online changes to your local directory.   
