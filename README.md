@@ -37,13 +37,26 @@ In your terminal, run the following command:
 
 `git clone [paste URL here]`  
 
+- Check your current directory - you should see a new folder show up with the github project name!  
+
+`ls`
+
+- Move into that folder:  
+`cd [name of github repo]`  
+`ls`  
+
 - You should now see the readme file show up in your local directory!  
+
+- You can also check to see that git is connected to the remote repository on github:  
+`git remote -v`  
+- You should see something like this:  
+![git-remote-v](imgs/git-remote-v.png)  
 
 ### 8. Create an empty test file in your local directory  
    
 `touch test.txt`  
 
-- type `ls` in your command line, and you should see this file appear. 
+- type `ls` in your command line, and you should see these files appear. 
 
 ### 9. Submit local changes to git
 `git add .`  
@@ -62,22 +75,28 @@ In your terminal, run the following command:
 
 ### 13. Create a .gitignore file using the command line
 - This is where you can specify which files/folders that you DON'T want sent to github from your local workspace.  
+- Start by creating another file - we will add it to .gitignore.
 
+`touch another-test.txt`  
+`ls`  
+
+- Create a .gitignore file, and open it in Vi from the command line to edit. 
 `touch .gitignore`  
 
 `vi .gitignore`  
 
-- press 'i' for insert, and write `test.txt` on the first line. We are going to see what happens when we add this to .gitignore and push changes to github.
+- press 'i' for insert, and write `another-test.txt` on the first line. We are going to see what happens when we add this to .gitignore and push changes to github.
 	- if you wanted to add a folder, it should be written like this: `folder-i-dont-want-on-github/`
-- press `<ESCAPE>` to get out of write mode onec you are finished
+- press `<ESCAPE>` to get out of write mode once you are finished
 - `:wq` and then `<ENTER>` will quit and save changes.  
 
 ### 14. add, commit, and push changes to github  
+
 `git add .`  
-`git commit -m "adding .gitignore file"`  
+`git commit -m "adding another-test.txt file"`  
 `git push origin main`   
 - note that this time, we don't need to add the -u flag.
-- Check your repository on github: the test.txt file should no longer appear, and your .gitignore file should be there.
+- Check your repository on github: the another-test.txt file should *not* appear, and your .gitignore file should be there.
 
 #### That's it! You did it!
 
@@ -95,7 +114,7 @@ In your terminal, run the following command:
 `rm test.txt test2.txt`
 
 ## Other useful commands
-- In this tutorial, we used `git clone` to download the repository from git onto our local drive. This does multiple things at once: in addition to downloading the repository, it automatically initiates a local git repository, and connects your local working directory with the remote repository. This works great in some cases, but there might be a case in which changes are made online in an existing repository and you want to update those changes locally, or perhaps you want to get started locally. 
+- In this tutorial, we used `git clone` to download the repository from github onto our local drive. This does multiple things at once: in addition to downloading the repository, it automatically initiates a local git repository, and connects your local working directory with the remote repository. This works great in some cases, but there might be a case in which changes are made online in an existing repository and you want to update those changes locally, or perhaps you want to get started locally. 
 
 If you want to get started locally, your workflow might look like: 
 
