@@ -80,7 +80,8 @@ In your terminal, run the following command:
 `touch another-test.txt`  
 `ls`  
 
-- Create a .gitignore file, and open it in Vi from the command line to edit. 
+- Create a .gitignore file, and open it in Vi from the command line to edit.  
+
 `touch .gitignore`  
 
 `vi .gitignore`  
@@ -93,7 +94,7 @@ In your terminal, run the following command:
 ### 14. add, commit, and push changes to github  
 
 `git add .`  
-`git commit -m "adding another-test.txt file"`  
+`git commit -m "adding .gitignore"`  
 `git push origin main`   
 - note that this time, we don't need to add the -u flag.
 - Check your repository on github: the another-test.txt file should *not* appear, and your .gitignore file should be there.
