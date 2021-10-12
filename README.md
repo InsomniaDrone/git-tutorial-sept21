@@ -125,6 +125,10 @@ If you want to get started locally, your workflow might look like:
 
 If you are working on an ongoing project, and you (or a collaborator) makes changes to an online repository, you'll want to update your local directory before making more changes. To do this, you can run:  
 
+`git fetch origin main`  
+`git merge origin main`  
+
+If you are working alone and only under a single branch, you can combine the above commands instead:  
 `git pull origin main`  
 
-to merge online changes to your local directory.   
+to merge online changes to your local directory. Note that `git pull` is not advised in cases of collaboration/multiple branches because it combines 2 commands at once, and doesn't allow you to check the new changes before merging them.
